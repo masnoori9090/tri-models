@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Model {
+  id              String   @id @default(uuid())
+  firstName       String
+  lastName        String
+  email           String   @unique
+  phone           String
+  dateOfBirth     DateTime
+  gender          String
+  city            String
+  country         String
+  
+  // Physical Attributes
+  height          Float    // in cm
+  weight          Float?   // in kg
+  bustChest       Float?   // in cm
+  waist           Float?   // in cm
+  hips            Float?   // in cm
+  shoeSize        Float?
+  hairColor       String?
+  eyeColor        String?
+  
+  // Professional Info
+  experienceLevel String?  // Beginner, Intermediate, Professional
+  yearsExperience Int?     @default(0)
+  categories      String   // Stored as JSON string or comma-separated
+  previousAgencies String?
+  specialSkills   String?
+  
+  // Social
+  instagram       String?
+  tiktok          String?
+  facebook        String?
+  website         String?
+  
+  // System
+  status          String   @default("PENDING") // PENDING, ACTIVE, INACTIVE, REJECTED
+  featured        Boolean  @default(false)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  photos          Photo[]
+  inquiries       Inquiry[]
+}
+
+model Photo {
+  id          String   @id @default(uuid())
+  url         String
+  type        String   // PROFILE, PORTFOLIO
+  category    String?  // FASHION, COMMERCIAL, etc.
+  isPrimary   Boolean  @default(false)
+  orderNumber Int      @default(0)
+  modelId     String
+  model       Model    @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now())
+}
+
+model Inquiry {
+  id          String   @id @default(uuid())
+  clientName  String
+  clientEmail String
+  clientPhone String?
+  message     String
+  status      String   @default("NEW") // NEW, READ, RESPONDED
+  modelId     String?
+  model       Model?   @relation(fields: [modelId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model Admin {
+  id        String   @id @default(uuid())
+  username  String   @unique
+  password  String   // Hashed
+  createdAt DateTime @default(now())
+}

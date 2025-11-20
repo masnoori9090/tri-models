@@ -1,0 +1,85 @@
+.container {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-heading);
+}
+
+.group {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.select,
+.input {
+    width: 100%;
+    background: var(--bg-off-white);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    color: var(--text-dark);
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.select:focus,
+.input:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    background: white;
+    box-shadow: 0 0 0 2px rgba(255, 105, 180, 0.1);
+}
+
+.row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.separator {
+    color: var(--text-light);
+}
+
+.resetButton {
+    width: 100%;
+    padding: 0.75rem;
+    background: transparent;
+    border: 1px solid var(--primary-pink);
+    color: var(--primary-pink);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.resetButton:hover {
+    background: var(--primary-pink-light);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        position: static;
+        margin-bottom: 2rem;
+    }
+}

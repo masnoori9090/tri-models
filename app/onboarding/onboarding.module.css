@@ -1,0 +1,144 @@
+.container {
+    min-height: 100vh;
+    padding: 6rem 2rem 4rem;
+    background: var(--bg-light);
+    display: flex;
+    justify-content: center;
+}
+
+.formWrapper {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 3rem 2.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: var(--text-heading);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    color: var(--text-dark);
+    font-weight: 400;
+}
+
+.input,
+.select {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-dark);
+    font-size: 0.9375rem;
+    transition: all 0.2s ease;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+}
+
+.phoneGroup {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.phoneCode {
+    width: 120px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+    padding: 0.75rem 0.5rem;
+    color: var(--text-dark);
+    font-size: 0.875rem;
+}
+
+.phoneInput {
+    flex: 1;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0.375rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-dark);
+    font-size: 0.9375rem;
+}
+
+.uploadArea {
+    border: 2px dashed #ddd;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    background: #fafafa;
+    transition: all 0.2s;
+}
+
+.uploadArea:hover {
+    border-color: var(--primary-pink);
+    background: var(--primary-pink-light);
+}
+
+.uploadIcon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.uploadText {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.uploadLink {
+    color: #0066ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.submitButton {
+    width: 100%;
+    padding: 0.875rem;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+    .formWrapper {
+        padding: 2rem 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

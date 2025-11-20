@@ -1,0 +1,105 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin: 0;
+}
+
+.clearBtn {
+    background: none;
+    border: none;
+    color: var(--primary-pink);
+    font-size: 0.875rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.clearBtn:hover {
+    text-decoration: underline;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.select,
+.input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background: white;
+}
+
+.select:focus,
+.input:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.separator {
+    color: var(--text-light);
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.radio {
+    accent-color: var(--primary-pink);
+}
+
+.applyButton {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.applyButton:hover {
+    background: var(--primary-pink);
+}

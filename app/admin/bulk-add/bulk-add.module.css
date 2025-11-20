@@ -1,0 +1,133 @@
+.container {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    background: var(--bg-off-white);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--primary-pink-dark);
+}
+
+.backLink {
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.backLink:hover {
+    opacity: 0.8;
+}
+
+.formCard {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.section:first-of-type {
+    padding-top: 0;
+    border-top: none;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--primary-pink-dark);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.fullWidth {
+    grid-column: span 2;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.input,
+.select {
+    background: var(--bg-off-white);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-dark);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.1);
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-pink);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.submitButton:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fullWidth {
+        grid-column: span 1;
+    }
+
+    .formCard {
+        padding: 1.5rem;
+    }
+}

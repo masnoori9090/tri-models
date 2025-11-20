@@ -1,0 +1,396 @@
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  background-image: url('/images/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroImage {
+  object-fit: cover;
+  z-index: -2;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: -1;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.heroTitle {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: 300;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btnPink {
+  background: var(--primary-pink);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-pink);
+}
+
+.btnPink:hover {
+  background: var(--primary-pink-dark);
+  border-color: var(--primary-pink-dark);
+  transform: translateY(-2px);
+}
+
+.btnWhite {
+  background: white;
+  color: black;
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.btnWhite:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--primary-pink);
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--primary-pink);
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btnOutline:hover {
+  background: var(--primary-pink);
+  color: white;
+}
+
+/* Stats Section */
+.stats {
+  background: white;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-pink);
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Main Layout with Sidebar */
+.mainSection {
+  padding: 4rem 0;
+  background: var(--bg-off-white);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+  background: white;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+}
+
+.modelsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
+.modelsHeader h2 {
+  font-size: 2rem;
+  color: var(--text-heading);
+}
+
+.modelsHeader p {
+  color: var(--text-light);
+}
+
+.modelGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.noResults {
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border-radius: 0.5rem;
+}
+
+.noResults p {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+}
+
+.viewAll {
+  text-align: center;
+}
+
+/* How It Works */
+.howItWorks {
+  padding: 6rem 0;
+  background: white;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  text-align: center;
+}
+
+.step {
+  padding: 2rem;
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-pink-light);
+  color: var(--primary-pink);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.step h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.step p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Industries */
+.industries {
+  padding: 6rem 0;
+  background: var(--bg-off-white);
+}
+
+.industryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.industryCard {
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+
+.industryCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-pink);
+  box-shadow: var(--shadow-md);
+}
+
+.industryIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.industryCard h3 {
+  color: var(--text-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Why Choose Us */
+.whyChoose {
+  padding: 6rem 0;
+  background: white;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: var(--bg-off-white);
+  border-radius: 1rem;
+}
+
+.featureIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  color: var(--text-light);
+}
+
+/* CTA */
+.cta {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  color: white;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+    /* Hide sidebar on tablet/mobile, rely on mobile filters page */
+  }
+
+  .statsGrid,
+  .industryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroButtons,
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .stepsGrid,
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+}

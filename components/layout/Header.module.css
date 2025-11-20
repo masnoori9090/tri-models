@@ -1,0 +1,117 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background-color: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-heading);
+    letter-spacing: 1px;
+}
+
+.nav {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.link {
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: var(--primary-pink);
+}
+
+.actions {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.btnPrimary {
+    background-color: var(--primary-pink);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+}
+
+.btnPrimary:hover {
+    background-color: var(--primary-pink-dark);
+}
+
+.btnOutline {
+    border: 1px solid var(--primary-pink);
+    color: var(--primary-pink);
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.btnOutline:hover {
+    background-color: var(--primary-pink-light);
+}
+
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav.open {
+        transform: translateY(0);
+    }
+
+    .mobileToggle {
+        display: block;
+    }
+
+    .btnOutline {
+        display: none;
+    }
+}

@@ -1,0 +1,80 @@
+.container {
+    min-height: 100vh;
+    background: var(--bg-light);
+    padding: 6rem 2rem 4rem;
+}
+
+.header {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--primary-pink);
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-pink-dark);
+}
+
+.date {
+    color: var(--text-light);
+    font-size: 0.875rem;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 3rem;
+}
+
+.section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-heading);
+}
+
+.section h3 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    color: var(--primary-pink-dark);
+}
+
+.section p {
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.section ul {
+    margin: 1rem 0 1rem 2rem;
+    line-height: 1.8;
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.section strong {
+    color: var(--primary-pink-dark);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+}
