@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: tri-models
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://postgres:tNnDbZldgTJRDBwXoWKGneNqFyBgkmjy@ballast.proxy.rlwy.net:23985/railway
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+    healthCheckPath: /
